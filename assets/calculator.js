@@ -60,8 +60,14 @@ function performCalculation() {
     let result = 0;
     if (calculator.operator === "+") {
         result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
-    } else {
+    } else if (calculator.operator === "-") {
         result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
+    } else if (calculator.operator === "X") {
+        result = parseInt(calculator.firstNumber) * parseInt(calculator.displayNumber);
+    } else if (calculator.operator === "/") {
+        result = parseInt(calculator.firstNumber) / parseInt(calculator.displayNumber);
+    } else if (calculator.operator === "%") {
+        result = parseInt(calculator.firstNumber) % parseInt(calculator.displayNumber);
     }
 
     const history = {
@@ -83,14 +89,21 @@ for (let button of buttons) {
                                 // mendapatkan objek elemen yang di-klik
                                 const target = event.target;
 
-                                if(target.classList.contains('clear')) {
-                                    clearCalculator();
+                                if(target.classList.contains('modulo')) {
+                                    modulo();
                                     updateDisplay();
                                     return;
                                 }
 
-                                if(target.classList.contains('negative')) {
+
+                                if(target.classList.contains('inverse')) {
                                     inverseNumber();
+                                    updateDisplay();
+                                    return;
+                                }
+
+                                if(target.classList.contains('clear')) {
+                                    clearCalculator();
                                     updateDisplay();
                                     return;
                                 }
