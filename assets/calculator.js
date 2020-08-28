@@ -38,7 +38,7 @@ function inverseNumber() {
     if (calculator.displayNumber === '0') {
         return;
     }
-    calculator.displayNumber = calculator.displayNumber * -1;
+    calculator.displayNumber = calculator.displayNumber * (-1);
 }
 
 function handleOperator(operator) {
@@ -90,7 +90,7 @@ for (let button of buttons) {
                                 }
 
                                 if(target.classList.contains('negative')) {
-                                    inversNumber();
+                                    inverseNumber();
                                     updateDisplay();
                                     return;
                                 }
