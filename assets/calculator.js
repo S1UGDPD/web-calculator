@@ -1,4 +1,4 @@
-alert("Welcome to WebCalculator!");
+//alert("Welcome to WebCalculator!");
 
 // OBJEK KONDISI AWAL KALKULATOR
 const calculator = {
