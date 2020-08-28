@@ -89,13 +89,6 @@ for (let button of buttons) {
                                 // mendapatkan objek elemen yang di-klik
                                 const target = event.target;
 
-                                if(target.classList.contains('modulo')) {
-                                    modulo();
-                                    updateDisplay();
-                                    return;
-                                }
-
-
                                 if(target.classList.contains('inverse')) {
                                     inverseNumber();
                                     updateDisplay();
