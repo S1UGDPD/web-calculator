@@ -81,6 +81,10 @@ function performCalculation() {
     renderHistory();
 }
 
+function deleteNumber() {
+    
+}
+
 
 const buttons = document.querySelectorAll(".button");
 for (let button of buttons) {
@@ -91,6 +95,12 @@ for (let button of buttons) {
 
                                 if(target.classList.contains('inverse')) {
                                     inverseNumber();
+                                    updateDisplay();
+                                    return;
+                                }
+
+                                if(target.classList.contains('delete')) {
+                                    deleteNumber();
                                     updateDisplay();
                                     return;
                                 }
