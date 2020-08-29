@@ -1,5 +1,12 @@
-* { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
-body { font-family: sans-serif; overflow: auto;}
+* { 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url("bg2.jpg");
+    font-family: sans-serif;
+    overflow: auto;
+}
 
 .flex-container-column {
     display: flex;
@@ -23,8 +30,8 @@ body { font-family: sans-serif; overflow: auto;}
     color: white;
     text-align: center;
     padding: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.75);
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.8));
+    margin: 2px;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.9));
     cursor: pointer;
 }
 .button:hover { background: -webkit-linear-gradient(top, #494949b7, rgba(83, 83, 83, 0.767)); font-weight: bold; }
@@ -38,7 +45,7 @@ body { font-family: sans-serif; overflow: auto;}
     color: white;
     width: 100%;
     padding: 10px 20px;
-    background-color: #333333;
+    //background-color: rgba(25, 25, 25, 0.9);
     font-size: 2em;
 }
 
@@ -46,8 +53,17 @@ body { font-family: sans-serif; overflow: auto;}
 .function:hover { background: rgb(114, 114, 114); }
 .function:active { background: orange; }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.cardb {
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cardw {
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 30px;
     margin-top: 20px;
@@ -55,7 +71,7 @@ body { font-family: sans-serif; overflow: auto;}
 
 .history {
     width: 80%;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
     overflow: scroll;
 }
 
@@ -64,6 +80,9 @@ body { font-family: sans-serif; overflow: auto;}
     margin: 1em;
     padding: 0.5em;
 }
+
+.flex75 { flex-basis: 50%; }
+.flex25 { flex-basis: 50%; }
 
 table {
     border-collapse: collapse;
@@ -83,7 +102,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #d2d2d2;
+    background-color: #d2d2d265;
 }
 
 @media screen and (max-width: 513px) {

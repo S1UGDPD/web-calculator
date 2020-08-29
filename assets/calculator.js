@@ -81,10 +81,17 @@ function performCalculation() {
     renderHistory();
 }
 
-function deleteNumber() {
-    
+function deleteDigit() {
+    if (calculator.waitingForSecondNumber && calculator.firstNumber === calculator.displayNumber) {
+        calculator.displayNumber.pop();
+    } else {
+        if (calculator.displayNumber === '0'){
+            calculator.displayNumber = '0';
+        } else {
+            calculator.displayNumber.pop();
+        }
+    }
 }
-
 
 const buttons = document.querySelectorAll(".button");
 for (let button of buttons) {
@@ -100,7 +107,7 @@ for (let button of buttons) {
                                 }
 
                                 if(target.classList.contains('delete')) {
-                                    deleteNumber();
+                                    deleteDigit();
                                     updateDisplay();
                                     return;
                                 }
