@@ -3,7 +3,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background-image: url("bg2.jpg");
+    background-image: url("bg1.jpg");
     font-family: sans-serif;
     overflow: auto;
 }
@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: row;
 }
+.flex50 { flex-basis: 50%; }
 .button {
     flex-basis: 25%;
 
@@ -80,9 +81,6 @@ body {
     margin: 1em;
     padding: 0.5em;
 }
-
-.flex75 { flex-basis: 50%; }
-.flex25 { flex-basis: 50%; }
 
 table {
     border-collapse: collapse;
