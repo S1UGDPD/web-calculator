@@ -1,4 +1,5 @@
 const CACHE_KEY = "calculation_history";
+const clearButton = document.querySelector(".clearHistory");
 
 function checkForStorage() {
     return typeof(Storage) !== "undefined";
@@ -46,5 +47,10 @@ function renderHistory() {
         historyList.appendChild(row);
     }
 }
+
+clearButton.addEventListener('click', function(event) {
+    localStorage.removeItem(CACHE_KEY);
+    renderHistory();
+});
 
 renderHistory();
