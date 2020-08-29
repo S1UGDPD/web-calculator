@@ -59,6 +59,12 @@ body { font-family: sans-serif; overflow: auto;}
     overflow: scroll;
 }
 
+.clearHistory {
+    float: right;
+    margin: 1em;
+    padding: 0.5em;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
